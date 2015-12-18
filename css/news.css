@@ -11,6 +11,7 @@ a {
 }
 body {
 	background-color: #E9F2F9;
+	font-family:  "Open Sans Condensed", sans-serif;
 }
 
 a:hover, a:link, a:visited {
@@ -19,7 +20,6 @@ a:hover, a:link, a:visited {
 h1 {
 	color: #1b325f;
 	text-align: center;
-	font-family:  sans-serif;
 }
 
 .news-grid {
@@ -27,9 +27,8 @@ h1 {
 	margin: 0 auto;
 	font-family:  sans-serif;
 	font-size: 1.2em;
-	line-height: 1.3em;
 	font-weight: 700;
-	}
+}
 
 .news-item {
 	float: left;
@@ -50,10 +49,11 @@ h1 {
 	width: 100%;
 }
 
-.news-rank {
+.news-footer {
 	text-align: center;
 	font-size: 0.8em;
 	color: #3A89C9;
+	padding: 10px;
 }
 
 .image {
@@ -62,4 +62,9 @@ h1 {
 
 .likes {
 	color: #F26C4F;
+}
+
+.date {	
+	color: #3A89C9;
+	font-size: 0.7em;
 }

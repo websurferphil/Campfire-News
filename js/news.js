@@ -1,5 +1,23 @@
-/* global $ */
+
 "use strict";
+
+var getDateString = function(number) {
+    var date = new Date(number);
+    var months = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+    return months[date.getMonth()] + " " + date.getDate() + ", " + date.getFullYear(); 
+}
+
+WebFont.load({
+    google: {
+        families: ["Open Sans Condensed"]
+    },
+    active: function () {
+        var e = $(".news-grid");
+        e.masonry("layout");
+    }
+});
 
 $(".news-grid").masonry();
 $(document).ready(function(){
@@ -19,13 +37,15 @@ $(document).ready(function(){
         
         newsData.forEach(function(element, index, array){
             var image;
-            if (element.image === "" ){
+            if (element.image === "" ) {
                 image = element.author.picture;
             } else {
                 image = element.image;
             }
             
-            $(".news-grid").append("<div class='news-item'><div class='news-header'><a href='" + element.link + "'>" + element.headline + "</a></div><div class='news-image'><img src='" + image + "' class='image' /></div><div class='news-rank'>Submitted by <a href='http://www.freecodecamp.com/" + element.author.username + "'>" + element.author.username + "</a> - <span class='likes'>Likes:" + element.rank + "</span></div></div>").masonry( 'reloadItems' );
+            var date = getDateString(element.timePosted);
+            
+            $(".news-grid").append("<div class='news-item'><div class='news-header'><a href='" + element.link + "'>" + element.headline + "</a><br /><span class ='date'>" + date + "</span></div><div class='news-image'><a href='" + element.link + "'><img src='" + image + "' class='image' /></a></div><div class='news-footer'>Submitted by <a href='http://www.freecodecamp.com/" + element.author.username + "'>" + element.author.username + "</a> - <span class='likes'>Likes: " + element.rank + "</span></div></div>").masonry( 'reloadItems' );
         });
     },
     error: function(data) {
