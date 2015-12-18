@@ -1,24 +1,49 @@
+/* colors from http://www.colourlovers.com/palette/27905/threadless */
+
 div, img, a {
 	float: none;
 	margin: 0;
 	padding: 0;
 }
 
+a {
+	text-decoration: none;
+}
+body {
+	background-color: #E9F2F9;
+}
+
+a:hover, a:link, a:visited {
+	color: #1B325F;
+}
+h1 {
+	color: #1b325f;
+	text-align: center;
+	font-family:  sans-serif;
+}
+
 .news-grid {
 	width: 90%;
-}
+	margin: 0 auto;
+	font-family:  sans-serif;
+	font-size: 1.2em;
+	line-height: 1.3em;
+	font-weight: 700;
+	}
 
 .news-item {
 	float: left;
-	width: 20%;
-	border: 1px solid #768E94;
+	width: 23%;
+	border: 1px solid #9CC4E4;
 	border-radius: 10px;
-	margin-bottom: 5px;
+	margin-bottom: 15px;
+	box-shadow: 3px 3px 3px #aaa; 
 }
 
 .news-header {
 	text-align: center;
-	padding: 5px;
+	padding: 10px;
+	margin: 0;
 }
 
 .news-image {
@@ -28,8 +53,13 @@ div, img, a {
 .news-rank {
 	text-align: center;
 	font-size: 0.8em;
+	color: #3A89C9;
 }
 
 .image {
 	width: 100%;
+}
+
+.likes {
+	color: #F26C4F;
 }

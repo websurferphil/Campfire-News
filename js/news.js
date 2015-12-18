@@ -1,3 +1,4 @@
+/* global $ */
 "use strict";
 
 $(".news-grid").masonry();
@@ -5,7 +6,7 @@ $(document).ready(function(){
     $('.news-grid').masonry({
         itemSelector: '.news-item',
         columnWidth: 50,
-        gutter: 5
+        gutter: 20
     });
 });
 
@@ -24,7 +25,7 @@ $(document).ready(function(){
                 image = element.image;
             }
             
-            $(".news-grid").append("<div class='news-item'><div class='news-header'><a href='" + element.link + "'>" + element.headline + "</a></div><div class='news-image'><img src='" + image + "' class='image' /></div><div class='news-rank'>Written by " + element.author.username + " - Likes:" + element.rank + "</div></div>").masonry( 'reloadItems' );
+            $(".news-grid").append("<div class='news-item'><div class='news-header'><a href='" + element.link + "'>" + element.headline + "</a></div><div class='news-image'><img src='" + image + "' class='image' /></div><div class='news-rank'>Submitted by <a href='http://www.freecodecamp.com/" + element.author.username + "'>" + element.author.username + "</a> - <span class='likes'>Likes:" + element.rank + "</span></div></div>").masonry( 'reloadItems' );
         });
     },
     error: function(data) {
