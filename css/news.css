@@ -1,0 +1,35 @@
+div, img, a {
+	float: none;
+	margin: 0;
+	padding: 0;
+}
+
+.news-grid {
+	width: 90%;
+}
+
+.news-item {
+	float: left;
+	width: 20%;
+	border: 1px solid #768E94;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+
+.news-header {
+	text-align: center;
+	padding: 5px;
+}
+
+.news-image {
+	width: 100%;
+}
+
+.news-rank {
+	text-align: center;
+	font-size: 0.8em;
+}
+
+.image {
+	width: 100%;
+}
