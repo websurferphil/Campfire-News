@@ -1,4 +1,3 @@
-
 "use strict";
 
 var getDateString = function(number) {
@@ -8,16 +7,6 @@ var getDateString = function(number) {
 ];
     return months[date.getMonth()] + " " + date.getDate() + ", " + date.getFullYear();
 };
-
-WebFont.load({
-    google: {
-        families: ["Open Sans Condensed"]
-    },
-    active: function () {
-        var e = $(".news-grid");
-        e.masonry("layout");
-    }
-});
 
 $(".news-grid").masonry();
 $(document).ready(function(){
