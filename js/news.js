@@ -23,7 +23,7 @@ $(document).ready(function(){
     async: false,
     success: function(data) {
         var newsData = data;
-        
+
         newsData.forEach(function(element, index, array){
             var image;
             if (element.image === "" ) {
@@ -31,14 +31,17 @@ $(document).ready(function(){
             } else {
                 image = element.image;
             }
-            
+
             var date = getDateString(element.timePosted);
-            
-            $(".news-grid").append("<div class='news-item'><div class='news-header'><a href='" + element.link + "'>" + element.headline + "</a><br /><span class ='date'>" + date + "</span></div><div class='news-image'><a href='" + element.link + "'><img src='" + image + "' class='image' /></a></div><div class='news-footer'>Submitted by <a href='http://www.freecodecamp.com/" + element.author.username + "'>" + element.author.username + "</a> - <span class='likes'>Likes: " + element.rank + "</span></div></div>").masonry( 'reloadItems' );
+
+            $(".news-grid").append("<div class='news-item'><div class='news-header'><a href='" + element.link + "'>" + element.headline + "</a><br /><span class ='date'>" + date + "</span></div><div class='news-image'><a href='" + element.link + "'><img src='" + image + "' class='image' /></a></div><div class='news-footer'>Submitted by <a href='http://www.freecodecamp.com/" + element.author.username + "'>" + element.author.username + "</a> - <span class='likes'>Likes: " + element.rank );
+            $(".news-grid").append("</span></div></div>");
         });
+    },
+    complete: function() {
+      $(".news-grid").masonry( 'reloadItems' ).masonry('layout' );
     },
     error: function(data) {
       console.log(data,"error");
     }
   });
-
