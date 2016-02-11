@@ -1,72 +1,102 @@
 /* colors from http://www.colourlovers.com/palette/27905/threadless */
 
-div, img, a {
-	float: none;
-	margin: 0;
-	padding: 0;
+div,
+img,
+a
+{
+    float: none;
+
+    margin: 0;
+    padding: 0;
 }
 
-a {
-	text-decoration: none;
+a
+{
+    text-decoration: none;
 }
-body {
-	background-color: #E9F2F9;
-	font-family:  "Open Sans Condensed", sans-serif;
+body
+{
+    font-family: 'Open Sans Condensed', sans-serif;
+
+    background-color: #e9f2f9;
 }
 
-a:hover, a:link, a:visited {
-	color: #1B325F;
+a:hover,
+a:link,
+a:visited
+{
+    color: #1b325f;
 }
-h1 {
-	color: #1b325f;
-	text-align: center;
+h1
+{
+    text-align: center;
+
+    color: #1b325f;
 }
 
-.news-grid {
-	width: 90%;
-	margin: 0 auto;
-	font-family:  sans-serif;
-	font-size: 1.2em;
-	font-weight: 700;
+.news-grid
+{
+    font-family: sans-serif;
+    font-size: 1.2em;
+    font-weight: 700;
+
+    width: 90%;
+    margin: 0 auto;
 }
 
-.news-item {
-	float: left;
-	width: 23%;
-	border: 1px solid #9CC4E4;
-	border-radius: 10px;
-	margin-bottom: 15px;
-	box-shadow: 3px 3px 3px #aaa; 
+.news-item
+{
+    float: left;
+
+    width: 23%;
+    margin-bottom: 15px;
+
+    border: 1px solid #9cc4e4;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #aaa;
 }
 
-.news-header {
-	text-align: center;
-	padding: 10px;
-	margin: 0;
+.news-header
+{
+    margin: 0;
+    padding: 10px;
+
+    text-align: center;
 }
 
-.news-image {
-	max-width: 100%;
-	max-height: 400px;
-	margin: 0 auto;
+.news-image
+{
+    max-width: 100%;
+    max-height: 400px;
+    margin: 0 auto;
 }
 
-.news-footer {
-	text-align: center;
-	font-size: 0.8em;
-	color: #3A89C9;
-	padding: 10px;
+.news-footer
+{
+    font-size: .8em;
+
+    padding: 10px;
+
+    text-align: center;
+
+    color: #3a89c9;
 }
 
-.image {
-	width: 100%;
+.image
+{
+    width: 100%;
+    max-height: 350px;
+		margin: 0 auto;
+	}
+
+.likes
+{
+    color: #f26c4f;
 }
 
-.likes {
-	color: #F26C4F;
-}
+.date
+{
+    font-size: .7em;
 
-.date {	
-	color: #3A89C9;
-	font-size: 0.7em;
+    color: #3a89c9;
 }

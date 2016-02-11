@@ -1,5 +1,3 @@
-"use strict";
-
 var getDateString = function(number) {
     var date = new Date(number);
     var months = ["January", "February", "March", "April", "May", "June",
